@@ -127,6 +127,7 @@ function maybeEnableButtons() {
  *  Sign in the user upon button click.
  */
 function handleAuthClick() {
+    /*
     tokenClient.callback = async (resp) => {
         if (resp.error !== undefined) {
             throw (resp);
@@ -144,6 +145,8 @@ function handleAuthClick() {
         // Skip display of account chooser and consent dialog for an existing session.
         tokenClient.requestAccessToken({ prompt: '' });
     }
+    */
+    listMajors();
 }
 
 /**
