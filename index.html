@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="tempBlankets.js"></script>
+</head>
+<body>
+	<label>Google Sheets Link: </label>
+	<input type="text" id="spreadsheetID" name="spreadsheetID">
+	<button id="authorize_button" style="visibility:true;" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" style="visibility:true;" onclick="handleSignoutClick()">Sign Out</button>
+	<br>
+	<br>
+	<div id="blanketCont" style="float: left;">
+		<canvas id="blanket" + width="480" height="730" style="border: 1px solid #000;"></canvas>
+	</div>
+	<div id="colorPickCont" style="float: left;">
+		<button id="color1btn" style="background: #084a75; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#084a75" id="color1in" name="color1in" style="width: 60px;">
+		<input type="number" value="30" id="temp1high" name="temp1high" style="width: 35px;">
+		<br>
+		<button id="color2btn" style="background: #a5e7e9; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#a5e7e9" id="color2in" name="color2in" style="width: 60px;">
+		<input type="number" value="31" id="temp2low" name="temp2low" style="width: 35px;">
+		<input type="number" value="40" id="temp2high" name="temp2high" style="width: 35px;">
+		<br>
+		<button id="color3btn" style="background: #c5afa3; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#c5afa3" id="color3in" name="color3in" style="width: 60px;">
+		<input type="number" value="41" id="temp3low" name="temp3low" style="width: 35px;">
+		<input type="number" value="58" id="temp3high" name="temp3high" style="width: 35px;">
+		<br>
+		<button id="color4btn" style="background: #ebc1b5; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#ebc1b5" id="color4in" name="color4in" style="width: 60px;">
+		<input type="number" value="59" id="temp4low" name="temp4low" style="width: 35px;">
+		<input type="number" value="66" id="temp4high" name="temp4high" style="width: 35px;">
+		<br>
+		<button id="color5btn" style="background: #bd6f6e; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#bd6f6e" id="color5in" name="color5in" style="width: 60px;">
+		<input type="number" value="67" id="temp5low" name="temp5low" style="width: 35px;">
+		<input type="number" value="82" id="temp5high" name="temp5high" style="width: 35px;">
+		<br>
+		<button id="color6btn" style="background: #924f46; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#924f46" id="color6in" name="color6in" style="width: 60px;">
+		<input type="number" value="83" id="temp6low" name="temp6low" style="width: 35px;">
+		<input type="number" value="88" id="temp6high" name="temp6high" style="width: 35px;">
+		<br>
+		<button id="color7btn" style="background: #4b0f23; padding: 2em; margin: 3px;"></button>
+		<input type="text" value="#591523" id="color7in" name="color7in" style="width: 60px;">
+		<input type="number" value="89" id="temp7low" name="temp7low" style="width: 35px;">
+	</div>
+	<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+	<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</body>
