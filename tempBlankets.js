@@ -51,6 +51,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function genBlanket() {
     const bCanv = document.getElementById("blanket");
     const ctx = bCanv.getContext("2d");
+    ctx.clearRect(0, 0, bCanv.width, bCanv.height);
     var colNum = 0;
     var day = 0;
     for (var i = 0; i < bCanv.height; i++) {
