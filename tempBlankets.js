@@ -56,7 +56,7 @@ function genBlanket() {
     var day = 0;
     for (var i = 0; i < bCanv.height; i++) {
         if (i % 2 == 0) {
-            if (temps.length - 1 <= day) {
+            if (temps.length - 1 < day) {
                 colNum = -1;
             }
             else {
