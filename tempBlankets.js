@@ -183,6 +183,7 @@ async function listMajors() {
     }
     const range = response.result;
     console.log(range);
+    temps = [];
     for (var i = 0; i < range.values.length; i++) {
         temps.push(range.values[i][0]);
     }
